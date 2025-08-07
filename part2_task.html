@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Omar Zaatreh | Software Engineer</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      background:
+       url('https://images.unsplash.com/photo-1625535069654-cfeb8f829088?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+      color: white;
+      padding: 60px 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 60px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 26px;
+      color: #2c3e50;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    img {
+      width: 150px;
+      height: 150px;
+      border: 5px solid white;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      animation: slideIn 1.5s ease-out;
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    li {
+      display: inline-block;
+      margin: 0 15px;
+      font-size: 18px;
+    }
+
+    article {
+      max-width: 800px;
+      background: white;
+      margin: 30px auto;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      animation: fadeInUp 1s ease;
+    }
+
+    button {
+      background-color: #3498db;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 40px; }
+      li { display: block; margin: 10px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://avatars.githubusercontent.com/u/9919?v=4" alt="Omar Zaatreh">
+    <h1>Omar Zaatreh</h1>
+    <p>Software Engineer | AI Enthusiast | Flutter & .NET Developer</p>
+    <ul>
+      <li><a href="#">About Me</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </header>
+
+  <article>
+    <h2>About Me</h2>
+    <p>I’m a driven and adaptable software engineer with expertise in Flutter, Java, Python, and .NET. I’ve completed a professional internship at Electronic Health Solutions (EHS) and earned the Oracle APEX Cloud Developer Certified Professional credential. I’m passionate about building intelligent systems using AI, including neural networks, computer vision, and speech recognition.</p>
+    <button>Like</button>
+  </article>
+
+  <article>
+    <h2>What I Build</h2>
+    <p>From mobile apps to full-stack systems, I focus on delivering scalable and intuitive solutions. My projects include social platforms for NPOs ,Volunteers and Coroprations, medicine reminder apps with Firebase integration.</p>
+    <button>Like</button>
+  </article>
+
+  <article>
+    <h2>Let's Connect</h2>
+    <p>Currently advancing my skills through AI and .NET courses. I'm open to exciting opportunities where I can contribute to impactful projects and continue learning. Reach out if you'd like to collaborate or learn more!</p>
+    <button>Like</button>
+  </article>
+
+  <script>
+    $("button").on("click", function() {
+      alert("Thanks for liking!");
+    });
+  </script>
+
+</body>
+</html>

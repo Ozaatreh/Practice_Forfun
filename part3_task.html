@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TechGalaxy Electronics</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Londrina+Shadow&display=swap" rel="stylesheet">
+
+  <style>
+    /* Animated Gradient Background */
+    @keyframes animatedGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Fade-in Animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    body {
+      font-family: helvetica, sans-serif;
+      margin: 0 auto;
+      max-width: 800px;
+      background: linear-gradient(45deg, #485163, #360d3f, #2c345d, #7815a9);
+      background-size: 300% 300%;
+      animation: animatedGradient 8s ease infinite;
+    }
+
+    h1 {
+      font-family: "Caveat", cursive;
+      text-align: center;
+      font-size: 75px;
+      color: #eaeaea;
+      margin: 60px 0 0 0;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+      animation: fadeInUp 1s ease-out;
+    }
+
+    h2 {
+      font-family: "Caveat", cursive;
+      text-align: center;
+      color: #dddddd;
+      margin: 0px 0 70px 0;
+      font-size: 24px;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      animation: fadeInUp 1.3s ease-out;
+    }
+
+    div {
+      height: 290px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      margin: 40px 0 0 0;
+      border-radius: 12px;
+      cursor: pointer;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      transform: scale(1);
+      transition: transform 0.3s ease;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    div:hover {
+      transform: scale(1.03);
+    }
+
+    p {
+      color: white;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4));
+      padding: 10px;
+      line-height: 28px;
+      text-align: justify;
+      position:absolute;
+      bottom: 33px;
+      left: 20px;
+      border-radius: 11px;
+      right: 55px;
+      margin: 0;
+      height: 30px;
+      transition: height 0.5s ease;
+    }
+
+    small {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .show-description p {
+      height: 150px;
+    }
+
+    .show-description small {
+      opacity: 1;
+    }
+
+    .first {
+      background-image: url("https://plus.unsplash.com/premium_photo-1678099940967-73fe30680949?q=80&w=880&auto=format&fit=crop");
+    }
+
+    .second {
+      background-image: url("https://images.unsplash.com/photo-1517336714731-489689fd1ca8");
+    }
+
+    .third {
+      background-image: url("https://s.yimg.com/ny/api/res/1.2/rtUwgs3e33oiLDuhlti50A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD04Mjg-/https://s.yimg.com/os/creatr-uploaded-images/2022-09/c30e25e0-3491-11ed-bfff-82a98395573d");
+    }
+
+    .price {
+      float: right;
+      font-weight: bold;
+      color: #31ac23;
+    }
+
+    @media (max-width: 800px) {
+      h1 {
+        font-size: 50px;
+        margin-top: 20px;
+        line-height: 40px;
+      }
+
+      h2 {
+        font-size: 20px;
+        margin: 20px 0 30px 0;
+      }
+
+      div {
+        margin: 20px 12px 0 12px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      small {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>TechGalaxy</h1>
+  <h2>Your Destination for the Latest Electronics</h2>
+
+  <div class="first">
+    <p>Wireless Headphones <span class="price">$99</span><br />
+    <small>High-fidelity audio with noise cancellation and 30 hours of battery life. Perfect for music lovers and remote workers alike.</small></p>
+  </div>
+
+  <div class="second">
+    <p>Gaming Laptop <span class="price">$1,299</span><br />
+    <small>Powerful GPU, 16GB RAM, 1TB SSD. Ideal for gamers, developers, and designers who need raw performance on the go.</small></p>
+  </div>
+
+  <div class="third">
+    <p>Smartwatch Series 7 <span class="price">$249</span><br />
+    <small>Track your fitness, monitor your heart rate, and stay connected with Bluetooth and LTE support.</small></p>
+  </div>
+
+  <script>
+    $('div').on('click', function () {
+      $(this).toggleClass('show-description');
+    });
+  </script>
+</body>
+</html>
